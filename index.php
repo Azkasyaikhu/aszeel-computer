@@ -1,5 +1,4 @@
 <?php
-// Memasukkan file koneksi
 include 'config/database.php';
 ?>
 
@@ -9,7 +8,6 @@ include 'config/database.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASZEEL COMPUTER - Jual Beli, Servis, & Percetakan</title>
-    <!-- CSS Sederhana (bisa nanti dipindah ke assets/css/style.css) -->
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
         header { background: #1e293b; color: #fff; padding: 20px; text-align: center; }

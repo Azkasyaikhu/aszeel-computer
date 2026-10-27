@@ -1,5 +1,5 @@
 <?php
-// Memasukkan file koneksi (karena posisinya di dalam folder modules/services, naik dua tingkat ke root lalu ke config)
+
 include '../../config/database.php';
 
 $search_result = null;
@@ -8,7 +8,6 @@ $error_message = "";
 if (isset($_GET['code'])) {
     $code = mysqli_real_escape_string($conn, $_GET['code']);
     
-    // Cari data servis berdasarkan kode unik
     $query = "SELECT * FROM service_orders WHERE service_code = '$code'";
     $result = mysqli_query($conn, $query);
     

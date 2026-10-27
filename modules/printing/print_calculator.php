@@ -1,5 +1,4 @@
 <?php
-// Memasukkan file koneksi (naik dua tingkat ke root lalu ke config)
 include '../../config/database.php';
 
 $success_message = "";
@@ -10,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $paper_type = mysqli_real_escape_string($conn, $_POST['paper_type']);
     $quantity = intval($_POST['quantity']);
     
-    // Penentuan tarif dasar per item/lembar
     $price_per_unit = 0;
     switch ($print_type) {
         case 'Document':
@@ -29,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $total_price = $price_per_unit * $quantity;
 
-    // Simpan ke database
+
     $query = "INSERT INTO printing_orders (customer_name, print_type, paper_type, quantity, total_price, status) 
               VALUES ('$customer_name', '$print_type', '$paper_type', '$quantity', '$total_price', 'Queued')";
     
