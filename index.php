@@ -31,10 +31,16 @@ include 'config/database.php';
     </header>
 
     <nav>
+       <nav>
         <a href="index.php">Beranda</a>
-        <a href="#products">Katalog Produk</a>
-        <a href="#services">Cek Servis</a>
-        <a href="#printing">Percetakan</a>
+        <a href="modules/products/catalog.php">Katalog</a>
+        <a href="modules/products/add_product.php">Input Produk</a>
+        <a href="modules/services/check_service.php">Cek Servis</a>
+        <a href="modules/services/service_list.php">Daftar Servis</a>
+        <a href="modules/services/add_service.php">Input Servis</a>
+        <a href="modules/printing/print_calculator.php">Kalkulator Cetak</a>
+        <a href="modules/printing/print_list.php">Daftar Cetak</a>
+    </nav>
     </nav>
 
     <div class="container">
